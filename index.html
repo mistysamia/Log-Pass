@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en " dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fixed.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</head>
+
+
+<header class="container sticky-top">
+
+    <!-- Navigation section start -->
+    <nav class="navbar navbar-expand-lg navbar-light nav_back fixed-top  ">
+        <div class="container-fluid">
+
+            <!-- LOGO start -->
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="logopass.png" alt="">
+            </a>
+            <!-- LOGO end -->
+
+            <!-- Menu start -->
+            <div class="d-flex justify-content-end">
+
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white me-3" aria-current="page" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-3" href="#password">PASSWORD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-3" href="#about_us">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-3" href="#footer">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menu end -->
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+    <!-- Navigation section end -->
+
+</header>
+
+<body>
+
+    <!-- Homepage section starts -->
+    <section class="video-background">
+        <div class="video-wrap">
+            <div id="video">
+                <video id="bgvid" autoplay loop muted playsinline>
+                    <source src="starts.mp4" .mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+    <section class="caption text-center">
+        <br><br><br><br><br><br><br><br><br><br>
+        <a class="btn btn-outline-light btn-lg" href="#password">GET STARTED</a>
+    </section>
+    <!-- Homepage section ends -->
+
+    <!-- Passwords section Starts -->
+    <section class="password" id="password">
+        <div class="max-width">
+            <div class="password-content">
+                <div class="password-form">
+                    <div class="container">
+                        <form name="myform" class="form-group">
+
+                            <h1 style="text-align:center ; padding-top: 46px; padding-bottom: 60px;font-size: 53px;">
+                                Password Generator</h1>
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="Password" style="font-size: 23px;">Password Length</label>
+                                    <div class="col-md-9">
+
+                                        <input id="length" type="number" class="form-control" placeholder="6" min="6"
+                                            max="25">
+
+                                    </div>
+                                </div>
+                                <br><br><br><br><br><br><br><br>
+                                <div class="col-md-4" >
+                                    <label for="Symbols" style="font-size: 23px;">Include Symbols</label>
+                                    <div class="col-md-9">
+                                        <input id="Symbols" type="text" class="form-control" placeholder="Yes/No">
+                                    </div>
+                                    <small class="small_color">[ e.g. [?-/)+- etc. ]</small>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="Numbers" style="font-size: 23px;">Include Numbers</label>
+                                    <div class="col-md-9">
+                                        <input id="Numbers" type="text" class="form-control" placeholder="Yes/No">
+                                    </div>
+                                    <small class="small_color">[ e.g. 124468 etc. ]</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="Lowercase" style="font-size: 23px;">Include Lowercase Characters</label>
+                                    <div class="col-md-9">
+                                        <div class="col-md-9">
+                                            <input id="Lowercase" type="text" class="form-control" placeholder="Yes/No">
+                                        </div>
+                                        <small class="small_color">[ e.g. abcdefgh ]</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="Uppercase" style="font-size: 23px;">Include Uppercase Characters</label>
+                                    <div class="col-md-9">
+                                        <div class="col-md-9">
+                                            <input id="Uppercase" type="text" class="form-control" placeholder="Yes/No">
+                                        </div>
+                                        <small class="small_color">[ e.g. ABCDEFGH ]</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="ExcludeSimilarCharacters" style="font-size: 23px;">Exclude Similar
+                                        Characters</label>
+                                    <div class="col-md-9">
+                                        <div class="col-md-9">
+                                            <input id="Excludesimilar" type="text" class="form-control"
+                                                placeholder="Yes/No">
+                                        </div>
+                                        <small class="small_color">[ e.g. i, l, 1, L, o, 0, O ]</small>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;  ">
+                                    <button type="submit" id="Generate" class="btn btn-outline-light" href="#password"
+                                        style="font-size: 20px;
+                                     margin-right: 100px; margin-top: 30px;">Generate</button>
+                                    <p style="text-align:center; display: none;" id=invalid> Invalid Information </p>
+                                </div>
+
+                                <br><br><br><br><br>
+                                <div class="col-md-4">
+                                    <label for="ExcludeSimilarCharacters" style="font-size: 23px; ">Generated Password :</label>
+                                    <br><br>
+                                    <div class="col-md-4">
+                                        <output type="text" id="ShowPassword" class="form-control-output" name="name"
+                                           placeholder="name">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-12" style="text-align:right; ">
+                                    <button id="copypass" type="Copy" class="btn btn-outline-light" style="font-size: 20px;
+                                     margin-right: 100px; margin-top: 30px;">
+                                        Copy</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Passwords section Ends -->
+
+
+
+
+    <!-- Extra screen section Starts -->
+    <section class="extra_page" id="extra_page">
+
+    </section>
+    <!-- Extra screen section Ends -->
+
+
+
+    <!-- About Page starts Here-->
+
+    <section class="about_us" id="about_us">
+        <div class="max-width">
+            <br><br><br><br><br><br><br><br>
+            <div class="about_us-content">
+                <div class="card">
+                    <div class="box">
+                        <div class="text">
+                            <1>
+                        </div>
+                        <p>Do not use the same password, security question and answer for multiple important accounts.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="text">
+                            <2>
+                        </div>
+                        <p>Do not use postcodes, house numbers, phone numbers, birthdates, ID card numbers,
+                            social security numbers, and so on in your passwords.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="text">
+                            <3>
+                        </div>
+                        <p> Use a password that has at least 16 characters, use at least one number,
+                            one uppercase letter, one lowercase letter and one special symbol.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="text">
+                            <4>
+                        </div>
+                        <p>Do not use the names of your families, friends or pets in your passwords.</p><br>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <div class="text">
+                            <5>
+                        </div>
+                        <p>Do not log in to important accounts on the computers of others,
+                            or when connected to a public Wi-Fi hotspot, Tor, free VPN or web proxy.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="text">
+                            <6>
+                        </div>
+                        <p>Do not use something that can be cloned( but you can't change )
+                            as your passwords, such as your fingerprints.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <!--About Page Ends Here-->
+
+    <!-- footer section Starts -->
+    <footer>
+        <section id="footer">
+            <div class="text-center">
+                <div class="brand">
+                    <h1><span>Samia Rahman</span> <span>Misty</span></h1>
+                </div>
+                <h2>01792004254<br>Mirpur Dohs,Dhaka</h2>
+                <div class="social-icon">
+                    <div class="social-item">
+                        <a href="https://www.facebook.com/misty.samia.39/"><img src="facebook.png" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://github.com/mistysamia"><img src="github.png" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="mailto:misty.samia17@gmail.com"><img src="gmail.png" /></a>
+                    </div>
+
+                </div>
+                <h2>Copyright © 2021 Misty. All rights reserved</h2>
+            </div>
+        </section>
+    </footer>
+    <!-- footer section Ends -->
+
+
+    <link rel="stylesheet" href="JS/bootstrap.min.js">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-4.1.3-dist/js/bootstarp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+
+
+    <script type="text/javascript">
+
+        window.onunload = function () { window.scrollTo(0, 0); }
+
+    </script>
+
+
+
+    <script>
+        const generateButton = document.getElementById("Generate");
+        generateButton.addEventListener("click", function () {
+            //  console.log("CHECKING");
+            const PassLen = document.getElementById("length").value;
+            const PassLenINT = parseInt(PassLen);
+            //console.log(PassLenINT);
+            var SmInt = 0, NmInt = 0, ExInt = 0, LowInt = 0, UpInt = 0;
+            const SymbolsIn = document.getElementById("Symbols").value;
+            const NumbersIn = document.getElementById("Numbers").value;
+            const ExcludesimilarIn = document.getElementById("Excludesimilar").value;
+            const LowercaselsIn = document.getElementById("Lowercase").value;
+            const UppercaseIn = document.getElementById("Uppercase").value;
+
+            SmInt = flag(SymbolsIn);
+            NmInt = flag(NumbersIn);
+            ExInt = flag(ExcludesimilarIn);
+            LowInt = flag(LowercaselsIn);
+            UpInt = flag(UppercaseIn);
+            var total=SmInt+NmInt+LowInt+UpInt;
+
+            if ((PassLen < 6 || PassLen > 25) || (SmInt == 0 && NmInt == 0
+                && LowInt == 0 && UpInt == 0) || total<2  ) {
+                const inv = document.getElementById("invalid");
+                inv.style.display = "block";
+            }
+            else {
+
+                const inv = document.getElementById("invalid");
+                inv.style.display = "none";
+                var sum = SmInt + NmInt + LowInt + UpInt;
+                var avg = Math.ceil(PassLenINT / sum);
+                var upperAR = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+                var lowerAR = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+                var numberAR = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+                var symbolAR = ['-', '_', '+', '=', '{', '}', '[', ']', '|', '/', '>', '<', '@', '!'];
+
+                var emptyString = "";
+
+                var blank1 = [], blank2 = [], blank3 = [], blank4 = [];
+
+                var tempavg = PassLenINT;
+                console.log(avg);
+                 console.log(SmInt);
+                 console.log(NmInt);
+
+                 console.log(LowInt);
+                 console.log(UpInt);
+                // console.log(ExInt);
+                if (UpInt == 1) {
+                    while (avg >blank1.length && ExInt == 1) {
+                        var x = ran(26);
+                        blank1 = _.union(blank1, [x ]);
+                    }
+                    while (avg >= blank1.length && ExInt == 0) {
+                        var x = ran(26);
+                        blank1.push(x );
+                    }
+
+                    tempavg = tempavg - avg;
+                }
+
+                if (LowInt == 1) {
+                    while (avg > blank2.length && ExInt == 1) {
+                        var x = ran(26);
+                        blank2 = _.union(blank2, [x]);
+                    }
+                    while (avg >= blank2.length && ExInt == 0) {
+                        var x = ran(26);
+                        blank2.push(x );
+                    }
+                    tempavg = tempavg - avg;
+                }
+
+                // var newavg =  Math.ceil(PassLenINT / 2);
+
+
+                if (SmInt == 1) {
+                    while (avg > blank3.length && ExInt == 1) {
+                        var x = ran(14);
+                        blank3 = _.union(blank3, [x ]);
+                    }
+                    while (avg >= blank3.length && ExInt == 0) {
+                        var x = ran(14);
+                        blank3.push(x );
+                    }
+                    tempavg = tempavg - avg;
+                }
+
+                if (NmInt == 1) {
+                    console.log("here");
+                    console.log(tempavg);
+
+                    while (tempavg >= blank4.length && ExInt == 1) {
+                        var x = ran(10);
+                        blank4 = _.union(blank4, [x ]);
+                    }
+                    while (tempavg >= blank4.length && ExInt == 0) {
+                        var x = ran(10);
+                        blank4.push(x );
+                    }
+                    console.log(blank4);
+                    //tempavg = PassLenINT - avg;
+                }
+                console.log("Array");
+                console.log(blank3);
+                console.log(blank4);
+                console.log(blank2);
+                console.log(blank1);
+
+                for (var i = 0; i < blank1.length && UpInt == 1; i++) {
+                    emptyString += upperAR[blank1[i]];
+                }
+                console.log("1");
+                console.log(emptyString);
+                for (var i = 0; i < blank2.length && LowInt == 1; i++) {
+                    emptyString += lowerAR[blank2[i]];
+                }
+                console.log("2");
+                console.log(emptyString);
+                for (var i = 0; i < blank4.length && NmInt == 1; i++) {
+                  
+                    emptyString += numberAR[blank4[i]];
+                }
+                console.log("3");
+                console.log(emptyString);
+                for (var i = 0; i < blank3.length && SmInt == 1; i++) {
+                
+                    emptyString += symbolAR[blank3[i]];
+                }
+                console.log("4");
+                console.log(emptyString);
+                var s = shuffle(emptyString);
+                s = shuffle(s);
+                var pass = "";
+                for (var i = 0; i < PassLenINT; i++) {
+                    pass += s[i];
+                }
+
+                document.getElementById("ShowPassword").value = pass;
+                document.getElementById("Symbols").value = "";
+                document.getElementById("Numbers").value = "";
+                document.getElementById("Excludesimilar").value = "";
+                document.getElementById("Lowercase").value = "";
+                document.getElementById("Uppercase").value = "";
+                document.getElementById("length").value = "";
+                 
+                document.getElementById("copypass").addEventListener("click", copyToClipboard(pass));
+                
+            }
+        })
+
+        function copyToClipboard(text) {
+            var dummy = document.createElement("textarea");
+            // to avoid breaking orgain page when copying more words
+            // cant copy when adding below this code
+            // dummy.style.display = 'none'
+            document.body.appendChild(dummy);
+            //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+        }
+        function flag(check) {
+            if (check.toUpperCase() == "YES")
+                return 1;
+            else
+                return 0;
+        }
+        function ran(vari) {
+            var dice = Math.random() * vari;
+            var x = Math.round(dice);
+            return x;
+        }
+        function shuffle(s) {
+            var arr = s.split('');
+
+            arr.sort(function () {
+                return 0.5 - Math.random();
+            });
+            s = arr.join('');
+            return s;
+        }
+    </script>
+</body>
+
+</html>
