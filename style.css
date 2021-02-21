@@ -31,7 +31,11 @@ body{
     pointer-events: none;
 }
 
-
+input[type='radio'] {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
 .caption{
     position: absolute;
     top:42%;
@@ -168,8 +172,7 @@ body{
 .form-control{
      width: 160px;
      height: 40px;
- 
-     background-color: #e0c9a9;
+     background-color: #e0a9d9;
 }
 
 
@@ -200,7 +203,7 @@ body{
     margin-right:1110px;
     border-bottom: 2px solid white;
     font-size: 21px;
-    color:  #272322;
+    color:rgb(206, 203, 203);
     margin-top: 20px;
 }
 .small{
