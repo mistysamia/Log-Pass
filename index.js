@@ -1,5 +1,5 @@
-
-        const generateButton = document.getElementById("Generate");
+ 
+       const generateButton = document.getElementById("Generate");
         generateButton.addEventListener("click", function () {
             //  console.log("CHECKING");
             const PassLen = document.getElementById("length").value;
