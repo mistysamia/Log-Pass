@@ -90,11 +90,11 @@
 
                                 <div class="col-md-4">
                                     <label for="Password" style="font-size: 23px;">Password Length</label>
-                                    <div >
+                                    <div>
 
                                         <!-- <input id="length" type="number" class="form-control" placeholder="6" min="6"
                                         max="25"> -->
-                                        <select class="form-control" id="length" placeholder="6"> 
+                                        <select class="form-control" id="length" placeholder="6">
 
                                             <optgroup label="Weak">
                                                 <option>6</option>
@@ -130,13 +130,14 @@
                                     </div>
                                 </div>
                                 <br><br><br><br><br><br><br><br>
-                                
+
                                 <div class="col-md-4">
                                     <label for="Symbols" style="font-size: 23px;">Include Symbols</label>
                                     <div>
                                         <form id="symbolclr">
                                             <input type="radio" name="Symbolchoice" value="yes" style="font-size:100px;"
-                                                id="Symbolyes"> <span style="font-size: 20px;color: rgb(206, 203, 203);">Yes</span>
+                                                id="Symbolyes"> <span
+                                                style="font-size: 20px;color: rgb(206, 203, 203);">Yes</span>
                                             <br>
                                             <input type="radio" name="Symbolchoice" value="no" id="Symbolno"> <span
                                                 style="font-size: 20px;color: rgb(206, 203, 203);">No</span>
@@ -231,22 +232,10 @@
                                                 Copy</button>
                                         </div>
                                         <div>
-                                            <button id="clear" type="Clear" class="btn btn-outline-light"
-                                                style="font-size: 20px; text-align: center; margin-left: 40px;" onclick="
-                                                document.getElementById('Uppercaseyes').checked = false;
-                                                document.getElementById('Uppercasesno').checked = false;
-                                                document.getElementById('length').value = '6';
-                                                document.getElementById('Lowercaseyes').checked = false;
-                                                document.getElementById('Lowercasesno').checked = false;
-                                                document.getElementById('ExcludeSimilarCharyes').checked = false;
-                                               document.getElementById('ExcludeSimilarCharno').checked = false;
-                                               document.getElementById('ShowPassword').value = '';
-                                               document.getElementById('Numbersyes').checked = false;
-                                               document.getElementById('Numbersno').checked = false;
-                                               //document.getElementById('Symbolyes').checked = false;
-                                             //  document.getElementById('Symbolno').checked = false;
-                                               ">
+                                            <button id="clearall" type="clear" class="btn btn-outline-light"
+                                                style="font-size: 20px; text-align: center; margin-left: 40px;">
                                                 Clear</button>
+
                                         </div>
                                     </div>
 
@@ -375,7 +364,7 @@
     </footer>
     <!-- footer section Ends -->
 
-  
+
     <!--<link rel="stylesheet" href="JS/bootstrap.min.js">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap-4.1.3-dist/js/bootstarp.min.js"></script>
@@ -394,6 +383,7 @@
 
 
     <script>
+
         const generateButton = document.getElementById("Generate");
         generateButton.addEventListener("click", function () {
             //  console.log("CHECKING");
@@ -415,7 +405,7 @@
             }
             if (SymbolsIn == "yes")
                 SmInt = 1;
-            else if(SymbolsIn == "no")
+            else if (SymbolsIn == "no")
                 SmInt = 0;
 
             console.log(SymbolsIn);
@@ -430,7 +420,7 @@
             }
             if (NumbersIn == "yes")
                 NmInt = 1;
-            else if(NumbersIn == "no")
+            else if (NumbersIn == "no")
                 NmInt = 0;
 
             console.log(NumbersIn);
@@ -446,7 +436,7 @@
             }
             if (ExcludesimilarIn == "yes")
                 ExInt = 1;
-            else if(ExcludesimilarIn == "no")
+            else if (ExcludesimilarIn == "no")
                 ExInt = 0;
 
             console.log(ExcludesimilarIn);
@@ -464,7 +454,7 @@
             }
             if (LowercaselsIn == "yes")
                 LowInt = 1;
-            else if(LowercaselsIn == "no")
+            else if (LowercaselsIn == "no")
                 LowInt = 0;
 
             console.log(LowercaselsIn);
@@ -480,7 +470,7 @@
             }
             if (UppercaseIn == "yes")
                 UpInt = 1;
-            else  if (UppercaseIn == "no")
+            else if (UppercaseIn == "no")
                 UpInt = 0;
 
             console.log(UppercaseIn);
@@ -490,8 +480,7 @@
 
             var total = SmInt + NmInt + LowInt + UpInt;
 
-            if(SmInt == -1 || NmInt == -1 || LowInt == -1 || UpInt == -1)
-            {
+            if (SmInt == -1 || NmInt == -1 || LowInt == -1 || UpInt == -1) {
                 alert("You have to fill up all the information Boxes!!");
                 document.getElementById("ShowPassword").value = "";
                 document.getElementById("Symbolyes").checked = false;
@@ -507,10 +496,10 @@
                 document.getElementById("length").value = "6";
             }
             else if ((PassLen < 6 || PassLen > 25) || (SmInt == 0 && NmInt == 0
-                && LowInt == 0 && UpInt == 0) || total < 2 ){
+                && LowInt == 0 && UpInt == 0) || total < 2) {
                 alert("Minimum two 'Yes' requires excluding similar characters.");
-                
-              
+
+
                 document.getElementById("ShowPassword").value = "";
                 document.getElementById("Symbolyes").checked = false;
                 document.getElementById("Symbolno").checked = false;
@@ -551,12 +540,12 @@
 
 
                 if (UpInt == 1) {
-                    var temp=[];
+                    var temp = [];
                     while (avg > blank1.length && ExInt == 1) {
                         var x = ran(25);
                         temp.push(x);
-                        var set_ob=new Set(temp);
-                        for(var element of set_ob){
+                        var set_ob = new Set(temp);
+                        for (var element of set_ob) {
                             blank1.push(element);
                         }
                     }
@@ -569,12 +558,12 @@
                 }
 
                 if (LowInt == 1) {
-                    var temp=[];
+                    var temp = [];
                     while (avg > blank2.length && ExInt == 1) {
                         var x = ran(25);
                         temp.push(x);
-                        var set_ob=new Set(temp);
-                        for(var element of set_ob){
+                        var set_ob = new Set(temp);
+                        for (var element of set_ob) {
                             blank2.push(element);
                         }
                     }
@@ -589,12 +578,12 @@
                 console.log("Misty");
 
                 if (SmInt == 1) {
-                    var temp=[];
+                    var temp = [];
                     while (avg > blank3.length && ExInt == 1) {
                         var x = ran(13);
                         temp.push(x);
-                        var set_ob=new Set(temp);
-                        for(var element of set_ob){
+                        var set_ob = new Set(temp);
+                        for (var element of set_ob) {
                             blank3.push(element);
                         }
                     }
@@ -608,12 +597,12 @@
                 if (NmInt == 1) {
                     console.log("here");
                     console.log(tempavg);
-                    var temp=[];
+                    var temp = [];
                     while (tempavg >= blank4.length && ExInt == 1) {
                         var x = ran(9);
                         temp.push(x);
-                        var set_ob=new Set(temp);
-                        for(var element of set_ob){
+                        var set_ob = new Set(temp);
+                        for (var element of set_ob) {
                             blank4.push(element);
                         }
                     }
@@ -662,35 +651,47 @@
                 }
 
                 document.getElementById("ShowPassword").value = pass;
-                 document.getElementById("Symbolyes").checked = false;
-                 document.getElementById("Symbolno").checked = false;
-                // document.getElementById("Numbersyes").checked = false;
-                // document.getElementById("Numbersno").checked = false;
-                // document.getElementById("ExcludeSimilarCharyes").checked = false;
-                // document.getElementById("ExcludeSimilarCharno").checked = false;
-                // document.getElementById("Lowercaseyes").checked = false;
-                // document.getElementById("Lowercasesno").checked = false;
-                // document.getElementById("Uppercaseyes").checked = false;
-                // document.getElementById("Uppercasesno").checked = false;
-                // document.getElementById("length").value = "6";
+                document.getElementById("Symbolyes").checked = false;
+                document.getElementById("Symbolno").checked = false;
 
-                document.getElementById("copypass").addEventListener("click", copyToClipboard(pass));
-
+           
             }
         })
 
-        function copyToClipboard(text) {
+
+        const copyButton = document.getElementById("copypass");
+        copyButton.addEventListener("click", function () {
+            const copied = document.getElementById("ShowPassword").value;
             var dummy = document.createElement("textarea");
-            // to avoid breaking orgain page when copying more words
-            // cant copy when adding below this code
-            // dummy.style.display = 'none'
             document.body.appendChild(dummy);
-            //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
-            dummy.value = text;
+            dummy.value = copied;
             dummy.select();
             document.execCommand("copy");
             document.body.removeChild(dummy);
-        }
+
+        })
+
+   
+
+        const clearButton = document.getElementById("clearall");
+        clearButton.addEventListener("click", function () {
+
+            document.getElementById("ShowPassword").value = "";
+            document.getElementById("Symbolyes").checked = false;
+            document.getElementById("Symbolno").checked = false;
+            document.getElementById("Numbersyes").checked = false;
+            document.getElementById("Numbersno").checked = false;
+            document.getElementById("ExcludeSimilarCharyes").checked = false;
+            document.getElementById("ExcludeSimilarCharno").checked = false;
+            document.getElementById("Lowercaseyes").checked = false;
+            document.getElementById("Lowercasesno").checked = false;
+            document.getElementById("Uppercaseyes").checked = false;
+            document.getElementById("Uppercasesno").checked = false;
+            document.getElementById("length").value = "6";
+
+        })
+
+
         function flag(check) {
             if (check.toUpperCase() == "YES")
                 return 1;
