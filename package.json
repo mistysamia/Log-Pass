@@ -13,12 +13,12 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mistysamia/Log-Pass/issues",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "url": "https://github.com/mistysamia/Log-Pass/issues"
+   
   },
   "homepage": "https://github.com/mistysamia/Log-Pass#readme",
   "dependencies": {
-   
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
