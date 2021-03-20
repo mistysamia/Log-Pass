@@ -8,5 +8,7 @@
 			"path": "Log-Pass"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Log-Pass"
+	}
 }
