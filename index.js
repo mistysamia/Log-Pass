@@ -1,13 +1,11 @@
 
 const generateButton = document.getElementById("Generate");
 generateButton.addEventListener("click", function () {
-    //  console.log("CHECKING");
+
     const PassLen = document.getElementById("length").value;
     const PassLenINT = parseInt(PassLen);
-    //console.log(PassLenINT);
+
     var SmInt = -1, NmInt = -1, ExInt = -1, LowInt = -1, UpInt = -1;
-
-
 
     let SymbolsIn, NumbersIn, LowercaselsIn, UppercaseIn, ExcludesimilarIn;
     const rbs1 = document.querySelectorAll('input[name="Symbolchoice"]');
@@ -23,8 +21,6 @@ generateButton.addEventListener("click", function () {
     else if (SymbolsIn == "no")
         SmInt = 0;
 
-    console.log(SymbolsIn);
-    console.log(SmInt);
     const rbs2 = document.querySelectorAll('input[name="Numberschoice"]');
 
     for (const rb2 of rbs2) {
@@ -38,8 +34,6 @@ generateButton.addEventListener("click", function () {
     else if (NumbersIn == "no")
         NmInt = 0;
 
-    console.log(NumbersIn);
-    console.log(NmInt);
 
     const rbs3 = document.querySelectorAll('input[name="ExcludesimilarCharchoice"]');
 
@@ -53,10 +47,6 @@ generateButton.addEventListener("click", function () {
         ExInt = 0;
     else if (ExcludesimilarIn == "no")
         ExInt = 1;
-
-    console.log(ExcludesimilarIn);
-    console.log(ExInt);
-
 
 
     const rbs4 = document.querySelectorAll('input[name="Lowercasechoice"]');
@@ -72,9 +62,6 @@ generateButton.addEventListener("click", function () {
     else if (LowercaselsIn == "no")
         LowInt = 0;
 
-    console.log(LowercaselsIn);
-    console.log(LowInt);
-
     const rbs5 = document.querySelectorAll('input[name="Uppercasechoice"]');
 
     for (const rb5 of rbs5) {
@@ -87,10 +74,6 @@ generateButton.addEventListener("click", function () {
         UpInt = 1;
     else if (UppercaseIn == "no")
         UpInt = 0;
-
-    console.log(UppercaseIn);
-    console.log(UpInt);
-
 
 
     var total = SmInt + NmInt + LowInt + UpInt;
@@ -156,14 +139,7 @@ generateButton.addEventListener("click", function () {
         var blank1 = [], blank2 = [], blank3 = [], blank4 = [];
 
         var tempavg = PassLenINT;
-        console.log(avg);
-        console.log(SmInt);
-        console.log(NmInt);
-
-        console.log(LowInt);
-        console.log(UpInt);
-        // console.log(ExInt);
-
+    
 
 
         if (UpInt == 1) {
@@ -202,9 +178,6 @@ generateButton.addEventListener("click", function () {
             tempavg = tempavg - avg;
         }
 
-        // var newavg =  Math.ceil(PassLenINT / 2);
-        console.log("Misty");
-
         if (SmInt == 1) {
             var st = new Set();
             if (ExInt == 1) {
@@ -237,11 +210,7 @@ generateButton.addEventListener("click", function () {
             console.log(blank4);
             //tempavg = PassLenINT - avg;
         }
-        console.log("Array");
-        console.log(blank3);
-        console.log(blank4);
-        console.log(blank2);
-        console.log(blank1);
+
 
         for (var i = 0; i < blank1.length && UpInt == 1; i++) {
             emptyString += upperAR[blank1[i]];
